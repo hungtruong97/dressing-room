@@ -6,9 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import categoryReducer from "./redux/categoryReducer";
+import productReducer from "./redux/productReducer";
 
 const rootReducer = combineReducers({
   category: categoryReducer,
+  product: productReducer,
 });
 
 const store = createStore(

@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 
 class Category extends Component {
   render() {
-    console.log(this.props.categoryList);
     return (
       <div className="btn-group d-flex justify-content-center mb-3">
         {this.props.categoryList.map((item) => {
