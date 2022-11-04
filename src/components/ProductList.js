@@ -8,7 +8,7 @@ class ProductList extends Component {
       <div className="row">
         {this.props.productList.map((item) => {
           return (
-            <div className="col-4">
+            <div key={item.id} className="col-4">
               <ProductItem item={item} />
             </div>
           );
