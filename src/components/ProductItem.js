@@ -8,7 +8,7 @@ export default class ProductItem extends Component {
         <div className="card p-2 mb-3">
           <img src={imgSrc_jpg} alt="" />
           <h3>{name}</h3>
-          <button className="btn btn-info">Try it on</button>
+          <button className="btn btn-info">Try it on!</button>
         </div>
       </div>
     );
