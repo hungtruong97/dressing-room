@@ -7,10 +7,12 @@ import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
 import categoryReducer from "./redux/categoryReducer";
 import productReducer from "./redux/productReducer";
+import modelReducer from "./redux/modelReducer";
 
 const rootReducer = combineReducers({
   category: categoryReducer,
   product: productReducer,
+  model: modelReducer,
 });
 
 const store = createStore(

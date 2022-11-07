@@ -4,9 +4,14 @@ import ProductItem from "./ProductItem";
 
 class ProductList extends Component {
   render() {
+    const { productList, selectedTab } = this.props;
+    let productFilter = productList.filter((item) => item.type === selectedTab);
+    if (productFilter.length === 0) {
+      productFilter = productList;
+    }
     return (
       <div className="row">
-        {this.props.productList.map((item) => {
+        {productFilter.map((item) => {
           return (
             <div key={item.id} className="col-4">
               <ProductItem item={item} />
@@ -21,6 +26,7 @@ class ProductList extends Component {
 const mapStateToProps = (state) => {
   return {
     productList: state.product.products,
+    selectedTab: state.product.selectedTab,
   };
 };
 
